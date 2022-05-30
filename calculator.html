@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+             width: 30%;
+            height: 500px;
+            border: 0px solid red;
+            margin: auto;
+        }
+        #heading{
+           width: 100%;
+           height: 100px;
+           border: 0px solid green;
+           text-align: center;
+
+        }
+        h1{
+            font-size: 40px;
+            color: #00807f;
+            font-weight: bold;
+        }
+        #box{
+             width: 100%;
+            height: 400px;
+            padding-top: 15px;
+            border: 1px transparent;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+        #box>div{
+         width: 80%;
+         height: 80%;
+         border: 0px solid red;
+         margin: auto;
+         margin-top: 40px;
+        }
+        #tab{
+            width: 100%;
+            height: 80%;
+            
+            border: 0px solid red;
+            display: grid;
+            gap: 10px;
+           
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4,1fr)
+            
+            
+        }
+        #tab>div{
+            border: 0px solid blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            
+        }
+        #up{
+            width: 100%;
+            height: 17%;
+            border: 0px solid yellow;
+            margin-bottom: 3%;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #tab>div:nth-child(4){
+            background-color: black;
+            color: aliceblue;
+            
+        }
+        #tab>div:nth-child(8){
+            background-color: black;
+            color: aliceblue;
+            
+        }
+        #tab>div:nth-child(12){
+            background-color: black;
+            color: aliceblue;
+            
+        }
+        #tab>div:nth-child(16){
+            background-color: black;
+            color: aliceblue;
+            
+        }
+        #tab>div:nth-child(15){
+            background-color: black;
+            color: aliceblue;
+            
+        }
+        #tab>div:nth-child(13){
+            background-color: red;
+            color: aliceblue;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="heading"><h1>Masai Calcutator</h1></div>
+        <div id="box">
+            <div>
+                <div id="up">
+           
+        </div>
+            <div id="tab">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>+</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>-</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>X</div>
+            <div>C</div>
+            <div>0</div>
+            <div>=</div>
+            <div>/</div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
