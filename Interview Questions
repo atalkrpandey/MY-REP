@@ -1,0 +1,159 @@
+ 1: What is the output of the following Java program?
+
+ Ans: 290
+
+ 2: Why are the objects immutable in java?
+
+ Ans: Maximum reliance on immutable objects is widely accepted as a sound strategy for creating simple, reliable code.
+      Immutable objects are particularly useful in concurrent applications. Since they cannot change state,
+      they cannot be corrupted by thread interference or observed in an inconsistent state.
+      Programmers are often reluctant to employ immutable objects, because they worry about the cost of 
+      creating a new object as opposed to updating an object in place. The impact of object creation is
+      often overestimated, and can be offset by some of the efficiencies associated with immutable objects. 
+      These include decreased overhead due to garbage collection, and the elimination of code needed to protect
+      mutable objects from corruption.
+
+ 3: Why CharArray() is preferred over String to store the password?
+
+ Ans: String is immutable so any who has access to memory can find the password in clear text but if we use array then
+      only address of object can get by the hacker not the proper password.
+ 
+ 4: Write a Java program to count the number of words present in a string?
+ 
+ Ans:   static int countWord(String string)  
+        {  
+          int count=0;  
+      
+            char ch[]= new char[string.length()];     
+            for(int i=0;i<string.length();i++)  
+            {  
+                ch[i]= string.charAt(i);  
+                if( ((i>0)&&(ch[i]!=' ')&&(ch[i-1]==' ')) || ((ch[0]!=' ')&&(i==0)) )  
+                    count++;  
+            }  
+            return count;  
+        }  
+
+ 5: What is the purpose of the finalize() method?
+
+ Ans: The Finalize method is used to perform cleanup operations on unmanaged resources
+      held by the current object before the object is destroyed. The method is protected 
+      and therefore is accessible only through this class or through a derived class.
+
+ 6: What is the difference between final, finally and finalize?
+
+ Ans: Final- final is the keyword and access modifier which is used to apply restrictions on a class,
+      method or variable. Final keyword is used with the classes, methods and variables.
+
+      Finally- finally is the block in Java Exception Handling to execute the important code whether
+      the exception occurs or not. Finally block is always related to the try and catch block in exception handling.
+
+      finalize- finalize method performs the cleaning activities with respect to the object before its destruction.
+      finalize method is executed just before the object is destroyed.
+
+ 7: What are autoboxing and unboxing? When does it occur?
+
+ Ans: Autoboxing is the automatic conversion that the Java compiler makes between the primitive types and their
+      corresponding object wrapper classes. For example, converting an int to an Integer, a double to a Double,
+      and so on. If the conversion goes the other way, this is called unboxing.
+
+ 8: What is the Collection framework in Java? What is Collection?
+
+ Ans: The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
+      Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion, 
+      manipulation, and deletion. Java Collection is an Inteface which has diffirent kind of of implementetion class and 
+      extended Interfaces.
+
+ 9: What are the main differences between array and collection?
+
+ Ans: Array- Arrays can hold the only the same type of data in its collection i.e only homogeneous data types elements 
+      are allowed in case of arrays. Arrays can hold both object and primitive type data.Arrays are fixed in size i.e
+      once the array with the specific size is declared then we can't alter its size afterward.
+     
+      Collection- Collection, on the other hand, can hold both homogeneous and heterogeneous elements.The collection is
+      dynamic in size i.e based on requirement size could be get altered even after its declaration. collection can hold
+      only object types but not the primitive type of data.
+
+ 10: What is the difference between ArrayList and Vector?
+
+ Ans: ArrayList- ArrayList is not synchronized.ArrayList increments 50% of the current array size if the number of elements
+      exceeds ts capacity.ArrayList is fast because it is non-synchronized. ArrayList is fast because it is non-synchronized.
+      
+      Vector- Vector is synchronized. Vector increments 100% means doubles the array size if the total number of elements
+      exceeds its capacity. Vector is a legacy class. Vector performance is low. only one threads is allowed here. 
+
+ 11: What is the difference between ArrayList and LinkedList?
+
+ Ans: ArrayList- ArrayList internally uses a dynamic array to store the elements.Manipulation with ArrayList is slow because 
+      it internally uses an array. If any element is removed from the array, all the other elements are shifted in memory.
+      ArrayList is better for storing and accessing data.The memory location for the elements of an ArrayList is contiguous.
+   
+      LinkedList- LinkedList internally uses a doubly linked list to store the elements. Manipulation with LinkedList is 
+      faster than ArrayList because it uses a doubly linked list, so no bit shifting is required in memory. LinkedList is
+      better for manipulating data. LinkedList class can act as a list and queue both because it implements List and Deque
+      interfaces.
+
+ 13: What is the difference between Iterator and Enumeration?
+
+ Ans: Iterator can do modifications (e.g using remove() method it removes the element from the Collection during traversal).
+      Enumeration interface acts as a read only interface, one can not do any modifications to Collection while traversing the elements of the Collection.
+
+ 14: What is the difference between List and Set?
+ 
+ Ans: List <E>: An ordered collection (also known as a sequence). The user of this interface has precise control over where
+      in the list each element is inserted. The user can access elements by their integer index (position in the list), 
+      and search for elements in the list.
+   
+      Set<E>: A collection that contains no duplicate elements. More formally, sets contain no pair of elements e1 and e2
+      such that e1.equals(e2), and at most one null element. As implied by its name, this interface models the mathematical
+      set abstraction.
+
+15: What is the difference between HashSet and TreeSet?
+  
+ Ans: 
+         HashSet                                                       TreeSet
+ 1 The Hash set is executed with the help of a HashTable.	The tree set is executed with the help of a tree structure.
+ 2	It does not authorise a heterogeneous object.	        It authorises a heterogeneous object.
+ 3	It permits a null object.	                        It does not permit the null object.
+ 4	To compare two objects, we use the equals method.	To compare two objects, we use the compare method.
+ 5	It does not support any order	                        TreeSet supports an object in sorted order.
+
+ 16: What is the difference between Set and Map? And what are similarities if think there are?
+
+ Ans: Set- The Java.util package provides the Set interface. Set is implemented by extending the collection interface.
+      It doesn't allow us to add the same element to it. It doesn't maintain the insertion order because it contains 
+      elements in a sorted way. For designing the mathematical Set, we use the Set interface in Java.
+    
+     Map- Map is another important interface available in the Collection interface. So, in order to use the Map interface,
+     we have to extend the Collection interface. Just like Set, Map is also used for storing collection of objects as a single
+     unit. Each object is store in a key-value pair. We can easily access the value using just the key because each value is 
+     associated with a unique value.
+     The similarity between them is both are avoid the dublicate when then store the new object.
+
+ 17: What is the difference between HashSet and HashMap?
+
+ Ans: HashSet- Hashmap is the implementation of Map interface. Hashmap internally do not implements hashset or any set for its
+      implementation. HashMap Stores elements in form of key-value pair i.e each element has its corresponding key which is
+      required for its retrieval during iteration. Hashmap due to its unique key is faster in retrieval of element during
+      its iteration.
+
+      HashMap- Hashset on other hand is the implementation of set interface. Hashset internally uses Hashmap for its implementation.
+      HashSet is completely based on object so compared to hashmap is slower. Hashset allows only one null value in its collection,
+      after which no null value is allowed to be added.
+
+ 18: What is the difference between HashMap and TreeMap?
+
+ Ans: HashMap allows a single null key and multiple null values. TreeMap does not allow null keys but can have multiple null values.
+      HashMap allows heterogeneous elements because it does not perform sorting on keys. TreeMap allows homogeneous values as a key because of sorting.
+
+ 19: What is the difference between HashMap and Hashtable?
+
+ Ans: HashMap is non-syncronized and is not thread safe while HashTable is thread safe and is synchronized. HashMap allows one null key and values can
+      be null whereas HashTable doesn't allow null key or value. HashMap is faster than HashTable. HashMap iterator is fail-safe where HashTable iterator
+      is not fail-safe.
+
+ 20: What is the difference between Collection and Collections?
+
+ Ans: Collection is used to represent a single unit with a group of individual objects whereas collections is used to operate on collection with several
+      utility methods. Since java 8, collection is an interface with static as well as abstract and default methods whereas collections operate only with 
+      static methods
